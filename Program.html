@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs | Landmark Vision School</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/program.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap">
+</head>
+<body>
+    <header>
+        <h1>Landmark Vision School</h1>
+        <div class="hamburger-menu">&#9776;</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#" id="openModal">About Us</a>
+            <a href="Programs.html">Programs</a>
+            <a href="Admissions.html">Admissions</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div id="unique-selling-points" class="content">
+        <h2>Why Choose Us?</h2>
+        <p>At Landmark Vision School, we stand out with our dedicated approach to student success.</p>
+        <ul class="usp-list">
+            <li>Innovative Learning Methods</li>
+            <li>Experienced Faculty</li>
+            <li>Strong Community Engagement</li>
+            <li>State-of-the-Art Facilities</li>
+            <li>Global Perspective on Education</li>
+        </ul>
+    </div>
+
+    <div id="programs" class="content">
+        <h2>Explore Our Programs</h2>
+        <p>Filter by interest:</p>
+        <select id="program-filter">
+            <option value="all">All Programs</option>
+            <option value="early-childhood">Early Childhood Education</option>
+            <option value="primary-school">Primary School Curriculum</option>
+            <option value="stem">STEM Education</option>
+            <option value="extracurricular">Extracurricular Activities</option>
+            <option value="character-education">Character Education</option>
+            <option value="language-development">Language Development</option>
+        </select>
+
+        <div class="programs-grid">
+            <div class="program-box early-childhood">
+                <img src="images/early-childhood.jpg" alt="Early Childhood Education">
+                <h3>Early Childhood Education</h3>
+                <p>Our Early Childhood program focuses on the holistic development of children through play-based learning, fostering cognitive, emotional, and social growth.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+
+            <div class="program-box primary-school">
+                <img src="images/primary-school.jpg" alt="Primary School Curriculum">
+                <h3>Primary School Curriculum</h3>
+                <p>We offer a comprehensive curriculum that emphasizes core academic skills, creativity, and critical thinking, ensuring a solid foundation for future learning.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+
+            <div class="program-box stem">
+                <img src="images/stem.jpg" alt="STEM Education">
+                <h3>STEM Education</h3>
+                <p>Our STEM program encourages curiosity and innovation by integrating Science, Technology, Engineering, and Mathematics into the learning process.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+
+            <div class="program-box extracurricular">
+                <img src="images/extracurricular.jpg" alt="Extracurricular Activities">
+                <h3>Extracurricular Activities</h3>
+                <p>We offer a wide range of extracurricular activities, including sports, music, art, and drama, to foster well-rounded development.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+
+            <div class="program-box character-education">
+                <img src="images/character-education.jpg" alt="Character Education">
+                <h3>Character Education</h3>
+                <p>Our Character Education program instills values such as respect, responsibility, and empathy, helping students develop strong moral principles.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+
+            <div class="program-box language-development">
+                <img src="images/language-development.jpg" alt="Language Development">
+                <h3>Language Development</h3>
+                <p>We provide a language-rich environment to enhance communication skills and foster a love for reading and writing in multiple languages.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Landmark Vision School. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        const filterSelect = document.getElementById('program-filter');
+        const programBoxes = document.querySelectorAll('.program-box');
+
+        filterSelect.addEventListener('change', function() {
+            const filterValue = filterSelect.value;
+
+            programBoxes.forEach(function(box) {
+                if (filterValue === 'all' || box.classList.contains(filterValue)) {
+                    box.style.display = 'block';
+                } else {
+                    box.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

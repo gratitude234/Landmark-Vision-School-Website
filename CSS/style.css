@@ -1,0 +1,318 @@
+:root {
+    --primary-color: #004d40; /* Dark Green */
+    --secondary-color: #e0f2f1; /* Light Green */
+    --accent-color: #f57c00; /* Orange */
+    --background-color: #ffffff; /* White */
+    --text-color: #333333; /* Dark Gray */
+    --light-text-color: #555555; /* Light Gray */
+    --font-family: 'Montserrat', sans-serif;
+    --transition-speed: 0.3s;
+}
+/* General Styles */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px 10%;
+    text-align: center;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+nav {
+    margin-top: 15px;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+}
+
+nav a {
+    color: var(--background-color);
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+    transition: color var(--transition-speed) ease;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.hero {
+    background-image: url('../image/Background_image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.1) */
+
+}
+.hero h1 {
+    font-size: 4vw;
+    margin: 0;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 1.8vw;
+    margin: 20px 0;
+    z-index: 1;
+}
+
+.content {
+    padding: 60px 10%;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.content h2 {
+    font-size: 2.5vw;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+    color: var(--primary-color);
+}
+
+.content p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: 0 auto;
+    color: var(--light-text-color);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.feature-box {
+    background-color: var(--secondary-color);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-box h3 {
+    color: var(--primary-color);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    transition: color var(--transition-speed) ease;
+}
+
+.feature-box p {
+    font-size: 1.1em;
+    color: var(--light-text-color);
+    transition: color var(--transition-speed) ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+.cta {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 50px 0;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.cta button {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    cursor: pointer;
+    border-radius: 50px;
+    margin: 0 10px;
+    transition: transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
+}
+
+.cta button:hover {
+    background-color: #e65100;
+    transform: translateY(-5px);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+footer a {
+    color: #FFD600;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-speed) ease;
+}
+
+footer a:hover {
+    color: #e65100;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevents scrolling inside the modal */
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Initial state for fade-in effect */
+    animation: fadeIn 0.5s forwards; /* Fade-in effect */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(-30px);
+    animation: slideDown 0.5s forwards ease-out 0.3s;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translate(-50%, -50%) translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* CSS to Disable Background Scrolling */
+body.modal-open {
+    overflow: hidden;
+}
+
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 3.5em;
+    }
+
+    .hero p {
+        font-size: 1.5em;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+}

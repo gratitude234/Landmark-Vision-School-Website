@@ -1,0 +1,343 @@
+:root {
+    --primary-color: #004d40; /* Dark Green */
+    --secondary-color: #e0f2f1; /* Light Green */
+    --accent-color: #f57c00; /* Orange */
+    --background-color: #ffffff; /* White */
+    --text-color: #333333; /* Dark Gray */
+    --light-text-color: #555555; /* Light Gray */
+    --font-family: 'Montserrat', sans-serif;
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.8;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px 0;
+    color: var(--background-color);
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.nav-links a {
+    color: var(--background-color);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    transition: color var(--transition-speed) ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.content {
+    padding: 80px 0;
+    text-align: center;
+    background-color: white;
+}
+
+
+.content h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.content p {
+    font-size: 1.2em;
+    color: var(--light-text-color);
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.step {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed) ease;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+}
+
+.step h3 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.step p {
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+.cta {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 50px 0;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.cta button {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    cursor: pointer;
+    border-radius: 50px;
+    margin: 0 10px;
+    transition: transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
+}
+
+.cta button:hover {
+    background-color: #e65100;
+    transform: translateY(-5px);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-speed) ease;
+}
+
+footer a:hover {
+    color: #ff9800;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.modal-content {
+    background-color: var(--background-color);
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    color: var(--light-text-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-content h2{
+    /* color: red; */
+    /* margin-top: 20px; */
+    /* border: 1px solid black; */
+    padding-top: 70px;
+    text-align: center;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content form label {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.modal-content form input,
+.modal-content form textarea,
+.modal-content form select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--light-text-color);
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.modal-content form button {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: none;
+    padding: 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.modal-content form button:hover {
+    background-color: #e65100;
+}
+
+
+
+
+
+
+/* Additional CSS for the Registration Form */
+form {
+    background-color: var(--background-color);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+form section {
+    margin-bottom: 40px;
+}
+
+form h3 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 1px solid var(--light-text-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    background-color: #f9f9f9;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.required {
+    color: var(--accent-color);
+}
+
+.error-message {
+    color: var(--accent-color);
+    font-size: 0.9em;
+    display: none;
+    margin-top: 5px;
+}
+
+.submit-group {
+    text-align: center;
+}
+
+.submit-btn {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.submit-btn:hover {
+    background-color: #e65100;
+    transform: translateY(-5px);
+}
